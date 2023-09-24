@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: azure;
+}
+
+.container{
+    width: 100vw;
+}
+
+li{
+    list-style: none;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+
+input{
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+button{
+    padding: 10px;
+    border: solid 0.5px #ccc;
+    border-radius: 5px;
+}
+
+button.delete{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+}
+
