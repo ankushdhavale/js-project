@@ -33,23 +33,42 @@ function userFlash(btn){
 
 
 const levelUp = ( ) => {
+    userSeq = [];2
     level++;
     h2.innerText = `Level ${level}`;
     
-
     let rendIdx = Math.floor(Math.random() * 3 );
     let randColor = btns[rendIdx];
-    let renBtn = document.querySelector(`.${randColor}`)
-    gameSeq.push(renBtn);
+    let ranBtn = document.querySelector(`.${randColor}`)
+    gameSeq.push(randColor);
     console.log(gameSeq);
-    btnFlash(renBtn);
+    btnFlash(ranBtn);
 
 }
+
+    function checkAns(idx) {
+        if(userSeq[idx] === gameSeq[idx]){
+            if(userSeq.length === gameSeq.length){
+                setTimeout(levelUp() , 1000);
+            }
+        }else{
+            h2.innerHTML = `Game is over ! Your Score was <b> ${level} </b> <br> press any key to start`;
+            document.querySelector("body").style.backgroundColor = "red";
+            setTimeout(function(){
+                document.querySelector("body").style.backgroundColor = "white";
+            },150);
+        }
+    }
 
 
 const btnPress = () =>{
    let btn = event.target;
    userFlash(btn);
+
+   userColor = btn.getAttribute("id");
+   userSeq.push(userColor);
+
+   checkAns(userSeq.length-1);
 }
 
 let allBtns = document.querySelectorAll(".btn");
@@ -58,3 +77,9 @@ for( btn of allBtns){
 }
 
 
+function reset(){
+    started = false;
+    gameSeq = [];
+    userSeq = [];
+    level = 0;
+}
