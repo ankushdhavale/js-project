@@ -1,7 +1,7 @@
 # JS PROJECT PRACTICE 
 17-09-2023     
-1st Day First Project Link :-  expanding-cards-jss.netlify.app
-2nd Progress App :-  https://progress-steps-jsproject.netlify.app
-3rd Todo App :-  https://todo-app-jsproject.netlify.app
+ Project Link :-  expanding-cards-jss.netlify.app
+ Progress App :-  https://progress-steps-jsproject.netlify.app
+ Todo App :-  https://todo-app-jsproject.netlify.app
 
 
